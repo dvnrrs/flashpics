@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  font-family: Roboto, sans-serif;
+  font-family: Lato, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -25,16 +25,55 @@ main {
 }
 
 .title {
+  color: #bbbbbb;
+  font-size: 15vmin;
+  font-weight: 300;
+  letter-spacing: 1vmin;
+  line-height: 8vmin;
+  text-align: center;
+  transition: opacity 2000ms ease-in-out;
+}
+
+.title b {
+  color: #ff0000;
+  font-weight: 300;
+  text-shadow: 0vmin 0vmin 4vmin rgba(255, 0, 0, 1);
+}
+
+.title small {
   color: #888888;
-  font-size: 24pt;
-  transition: opacity 1000ms ease-in-out;
+  font-size: 5vmin;
+  font-weight: 300;
+  letter-spacing: 0.45vmin;
+}
+
+.title small b {
+  color: #3388ff;
+  text-shadow: 0vmin 0vmin 1vmin rgba(51, 136, 255, 1);
 }
 
 .word {
+  background-color: black;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 90%;
-  transition: opacity 1000ms ease-in-out;
-  width: 90%;
+  height: 100%;  
+  transition: opacity 2000ms ease-in-out;
+  width: 100%;
+}
+
+.full-screen-icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 5vmin;
+  cursor: pointer;
+  height: 10vmin;
+  position: absolute;
+  right: 5vmin;
+  width: 10vmin;
+}
+
+.fullscreen {
+  background-color: transparent !important;
 }
