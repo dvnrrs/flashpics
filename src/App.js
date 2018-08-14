@@ -21,6 +21,7 @@ const WORDS = [
   {word: 'boat', image: 'images/boat.jpg', bg: '#afacb2'},
   {word: 'book', image: 'images/book.webp', bg: '#606060'},
   {word: 'bowl', image: 'images/bowl.jpg', bg: '#ffffff'},
+  {word: 'bubble', image: 'images/bubble.jpg', bg: '#000000'},
   {word: 'bus', image: 'images/bus.jpg', bg: '#ffffff'},
   {word: 'car', image: 'images/car.jpg', bg: '#ffffff'},
   {word: 'chair', image: 'images/chair.jpg', bg: '#ffffff'},
