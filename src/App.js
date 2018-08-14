@@ -86,7 +86,7 @@ const WORDS = [
   {word: 'sky', image: 'images/sky.jpg'},
   {word: 'smoke detector', image: 'images/smoke_detector.jpg'},
   {word: 'spoon', image: 'images/spoon.jpg'},
-  {word: 'square', image: 'images/square.jpg'},
+  {word: 'square', image: 'images/square.png'},
   //{word: 'stand up', image: 'images/stand_up.jpg'},
   {word: 'stop', image: 'images/stop.jpg'},
   {word: 'sun', image: 'images/sun.jpeg'},
