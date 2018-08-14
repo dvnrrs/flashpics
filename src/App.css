@@ -47,11 +47,6 @@ main {
   letter-spacing: 0.45vmin;
 }
 
-.title small b {
-  color: #3388ff;
-  text-shadow: 0vmin 0vmin 1vmin rgba(51, 136, 255, 1);
-}
-
 .word {
   background-color: black;
   background-position: center center;

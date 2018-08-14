@@ -182,7 +182,7 @@ export default class App extends Component {
         </div>
         <div className="container">
           <Transition in={this.state.showTitle} timeout={0}>
-            {state => <div className="title" style={transitionStyles[state]}>FLASH<b>PICS</b><br/><small>VOCABULARY FOR <b>ALEXANDER</b></small></div>}
+            {state => <div className="title" style={transitionStyles[state]}>FLASH<b>PICS</b><br/><small>VOCABULARY FOR ALEXANDER</small></div>}
           </Transition>
         </div>
         {!this.state.isFullScreen && <div className="full-screen-icon"
