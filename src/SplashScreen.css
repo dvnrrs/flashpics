@@ -1,0 +1,27 @@
+.splash-screen {
+    align-items: center;
+    background-color: 'black';
+    display: flex;
+    justify-content: center;
+}
+
+.splash-screen-title {
+    color: #cccccc;
+    font-size: 15vmin;
+    font-weight: 300;
+    letter-spacing: 1vmin;
+    line-height: 8vmin;
+}
+  
+.splash-screen-title b {
+    color: #ff0000;
+    font-weight: 300;
+    text-shadow: 0 0 4vmin red;
+}
+
+.splash-screen-title small {
+    color: #888888;
+    font-size: 5vmin;
+    font-weight: 300;
+    letter-spacing: 0.45vmin;
+}

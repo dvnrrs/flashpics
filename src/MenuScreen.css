@@ -1,0 +1,55 @@
+.menu-screen-tile {
+    align-items: center;
+    color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+}
+
+.menu-screen-tile-c1 {
+    left: 0;
+    width: 33%;
+}
+
+.menu-screen-tile-c2 {
+    left: 33%;
+    right: 33%;
+}
+
+.menu-screen-tile-c3 {
+    width: 33%;
+    right: 0;
+}
+
+.menu-screen-tile-r1 {
+    top: 0;
+    height: 33%;
+}
+
+.menu-screen-tile-r2 {
+    top: 33%;
+    bottom: 33%;
+}
+
+.menu-screen-tile-r3 {
+    height: 33%;
+    bottom: 0;
+}
+
+.menu-screen-tile-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    height: 35%;
+    width: 75%;
+}
+
+.menu-screen-tile-label {
+    font-size: 2.5vh;
+    font-weight: 300;
+    margin-top: 2vh;
+    text-align: center;
+    text-transform: uppercase;
+}
