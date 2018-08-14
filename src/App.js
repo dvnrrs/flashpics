@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fullscreen from "react-full-screen";
 import Transition from 'react-transition-group/Transition';
 import './App.css';
 
@@ -151,18 +152,20 @@ export default class App extends Component {
     if (this.state.currentWord)
     wordStyle.backgroundImage = 'url("' + this.state.currentWord.image + '")';
 
-    return <main onClick={this.showNextImage.bind(this)}>
-      <div className="container">
-        <Transition in={this.state.showTitle} timeout={0}>
-          {state => <div className="title" style={transitionStyles[state]}>FLASHPICS</div>}
-        </Transition>
-      </div>
-      <div className="container">
-        <Transition in={this.state.showWord} timeout={0}>
-          {state => <div className="word" style={{...wordStyle, ...transitionStyles[state]}} />}
-        </Transition>
-      </div>
-    </main>;
+    return <Fullscreen enabled={true}>
+      <main onClick={this.showNextImage.bind(this)}>
+        <div className="container">
+          <Transition in={this.state.showTitle} timeout={0}>
+            {state => <div className="title" style={transitionStyles[state]}>FLASHPICS</div>}
+          </Transition>
+        </div>
+        <div className="container">
+          <Transition in={this.state.showWord} timeout={0}>
+            {state => <div className="word" style={{...wordStyle, ...transitionStyles[state]}} />}
+          </Transition>
+        </div>
+      </main>
+    </Fullscreen>;
 
   }
 
