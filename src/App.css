@@ -53,8 +53,24 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;  
+  position: relative;
   transition: opacity 2000ms ease-in-out;
   width: 100%;
+}
+
+.text {
+  bottom: 5vmin;
+  color: white;
+  font-size: 10vmin;
+  font-weight: bold;
+  height: 10vmin;
+  left: 0;
+  letter-spacing: 0.5vmin;
+  line-height: 10vmin;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-shadow: 0 0 2vmin #000000;
 }
 
 .full-screen-icon {

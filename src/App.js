@@ -123,8 +123,10 @@ export default class App extends Component {
     this.setState({showTitle: true})
     setTimeout(() => {
       this.setState({showTitle: false});
-      setTimeout(() => this.setState({currentWord: this.state.nextWord, showWord: true}), 2000);
-      this.preloadNextWord();
+      setTimeout(() => {
+        this.setState({currentWord: this.state.nextWord, showWord: true});
+        this.preloadNextWord();
+      }, 2000);
     }, 5000);
     this.preloadNextWord();
   }
@@ -177,7 +179,9 @@ export default class App extends Component {
       <main onClick={this.showNextImage.bind(this)}>
         <div className="container">
           <Transition in={this.state.showWord} timeout={0}>
-            {state => <div className="word" style={{...wordStyle, ...transitionStyles[state]}} />}
+            {state => <div className="word" style={{...wordStyle, ...transitionStyles[state]}}>
+              <div className="text">{this.state.currentWord && this.state.currentWord.word}</div>
+            </div>}
           </Transition>
         </div>
         <div className="container">
