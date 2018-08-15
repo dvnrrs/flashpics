@@ -1,7 +1,7 @@
 export default [
     {word: 'airplane',          image: 'images/airplane.jpg',       bg: '#7ea4e5', tags: ['activities']},
     {word: 'apple',             image: 'images/apple.jpg',          bg: '#ffffff', tags: ['food']},
-    {word: 'apple sauce',       image: 'images/apple_sauce.png',    bg: '#ffffff', tags: ['food']},
+    {word: 'apple sauce',       image: 'images/apple_sauce.jpg',    bg: '#ffffff', tags: ['food']},
     {word: 'arm',               image: 'images/arm.jpg',            bg: '#ffffff', tags: ['body']},
     {word: 'baby',              image: 'images/baby.jpg',           bg: '#ffffff', tags: ['activities']},
     {word: 'ball',              image: 'images/ball.jpg',           bg: '#ffffff', tags: ['activities']},
@@ -32,7 +32,7 @@ export default [
     {word: 'eye',               image: 'images/eye.jpg',            bg: '#f9b593', tags: ['body']},
     {word: 'eyebrow',           image: 'images/eyebrow.jpg',        bg: '#edbb96', tags: ['body']},
     {word: 'finger',            image: 'images/finger.jpeg',        bg: '#ffffff', tags: ['body']},
-    {word: 'fish',              image: 'images/fish.png',           bg: '#ffffff', tags: ['animals']},
+    {word: 'fish',              image: 'images/fish.jpg',           bg: '#ffffff', tags: ['animals']},
     {word: 'flower',            image: 'images/flower.jpg',         bg: '#405423', tags: ['activities']},
     {word: 'foot',              image: 'images/foot.jpg',           bg: '#ffffff', tags: ['body']},
     {word: 'fork',              image: 'images/fork.jpg',           bg: '#ffffff', tags: ['eating']},
