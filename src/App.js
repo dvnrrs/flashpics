@@ -6,6 +6,7 @@ import Library from './Library';
 import MenuScreen from './MenuScreen';
 import SplashScreen from './SplashScreen';
 
+import BackIcon from './images/left_arrow.png';
 import FullScreenIcon from './images/fullscreen.png';
 import './App.css';
 
@@ -13,7 +14,7 @@ export default class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {state: 'splash', categories: null, full: false};
+        this.state = {state: 'splash', full: false};
     }
 
     onCategoriesSelected(categories) {
@@ -54,6 +55,10 @@ export default class App extends Component {
         e.stopPropagation();
     }
 
+    goBack(e) {
+        this.setState({state: 'menu', pool: null});
+    }
+
     render() {
         return (
             <Fullscreen enabled={this.state.full}
@@ -68,6 +73,10 @@ export default class App extends Component {
                     <div className="full-screen-icon"
                          style={{backgroundImage: 'url("' + FullScreenIcon + '")'}}
                          onClick={this.goFull.bind(this)} />}
+                {this.state.state === 'cards' &&
+                    <div className="back-icon"
+                         style={{backgroundImage: 'url("' + BackIcon + '")'}}
+                         onClick={this.goBack.bind(this)} />}
             </Fullscreen>
         );
     }

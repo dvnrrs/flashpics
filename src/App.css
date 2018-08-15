@@ -14,17 +14,31 @@ body {
 }
 
 .full-screen-icon {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  bottom: 2.5vmin;
-  cursor: pointer;
-  height: 10vmin;
-  position: absolute;
-  right: 2.5vmin;
-  width: 10vmin;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 2.5vmin;
+    cursor: pointer;
+    height: 10vmin;
+    opacity: 0.2;
+    position: absolute;
+    right: 2.5vmin;
+    width: 10vmin;
 }
 
+.back-icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 2.5vmin;
+    cursor: pointer;
+    height: 10vmin;
+    left: 2.5vmin;
+    opacity: 0.2;
+    position: absolute;
+    width: 10vmin;
+}
+  
 .fullscreen {
     background-color: transparent;
 }
