@@ -22,7 +22,15 @@ export default class App extends Component {
             let include = false;
             for (let i = 0; i < categories.length && !include; ++i) {
                 if (categories[i] === '*') {
-                    include = true;
+                    let j = 0;
+                    for (j = 0; j < word.tags.length; ++j) {
+                        if (word.tags[j] === 'letters' || word.tags[j] === 'numbers') {
+                            break;
+                        }
+                    }
+                    if (j === word.tags.length) {
+                        include = true;
+                    }
                 }
                 for (let j = 0; j < word.tags.length && !include; ++j) {
                     if (word.tags[j] === categories[i]) {

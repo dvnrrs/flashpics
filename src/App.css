@@ -17,11 +17,11 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  bottom: 5vmin;
+  bottom: 2.5vmin;
   cursor: pointer;
   height: 10vmin;
   position: absolute;
-  right: 5vmin;
+  right: 2.5vmin;
   width: 10vmin;
 }
 

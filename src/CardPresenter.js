@@ -25,11 +25,22 @@ export default class CardPresenter extends Component {
             pool = pool.slice();
             pool.splice(i, 1);
 
+            let color = undefined;
+            if (this.state.nextWord &&
+                    !this.state.nextWord.image &&
+                    !this.state.nextWord.bg) {
+                const h = Math.floor(Math.random() * 360);
+                const s = 50 + Math.floor(Math.random() * 50);
+                const l = 30 + Math.floor(Math.random() * 40);
+                color = 'hsl(' + h + ', ' + s + '%, ' + l + '%)';
+            }
+
             this.setState({
                 word: this.state.nextWord,
                 nextWord: word,
                 nextImage: image,
                 pool: pool,
+                color: color,
             });
 
         }
@@ -67,21 +78,30 @@ export default class CardPresenter extends Component {
 
     render() {
 
-        console.log(this.state);
-
         const styles = {
             opacity: this.state.opacity,
             transition: 'opacity ' + (this.props.fade || 1000) + 'ms ease-in-out',
         };
 
+        const imageStyles = {};
         if (this.state.word) {
-            styles.backgroundColor = this.state.word.bg;
-            styles.backgroundImage = 'url("' + this.state.word.image + '")';
+            if (this.state.word.image) {
+                imageStyles.backgroundImage = 'url("' + this.state.word.image + '")';
+            }
+            styles.backgroundColor = this.state.word.bg || '#000000';
         }
 
         return (
             <div className="full-page card" style={styles} onClick={this.onClick.bind(this)}>
-                <div className="card-text">{this.state.word && this.state.word.word}</div>
+                <div className="card-image" style={imageStyles}></div>
+                {this.state.word && (this.state.word.image || this.state.word.bg) &&
+                    <div className="card-label" style={{backgroundColor: this.state.word.bg}}>
+                        {this.state.word.word}
+                    </div>}
+                {this.state.word && !this.state.word.image && !this.state.word.bg &&
+                    <div className="card-text" style={{color: this.state.color}}>
+                        {this.state.word.word}
+                    </div>}
             </div>
         );
 
