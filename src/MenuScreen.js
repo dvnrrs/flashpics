@@ -45,7 +45,7 @@ export default class MenuScreen extends Component {
                 <div className="menu-screen-tile menu-screen-tile-r1 menu-screen-tile-c1">
                     <div className="menu-screen-tile-image"
                          style={{backgroundImage: 'url("' + Activities + '")'}}
-                         onClick={this.onCategoriesSelected.bind(this, ['activities'])}/>
+                         onClick={this.onCategoriesSelected.bind(this, ['activities', 'vehicles'])}/>
                     <div className="menu-screen-tile-label">Activities</div>
                 </div>
                 <div className="menu-screen-tile menu-screen-tile-r1 menu-screen-tile-c2">

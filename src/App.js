@@ -10,11 +10,27 @@ import BackIcon from './images/left_arrow.png';
 import FullScreenIcon from './images/fullscreen.png';
 import './App.css';
 
+function getParameterByName(name) {
+    const url = window.location.href;
+    name = name.replace(/[[\]]/g, '\\$&');
+    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    const results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 export default class App extends Component {
 
     constructor(props) {
         super(props);
         this.state = {state: 'splash', full: false};
+        const initialWord = getParameterByName('word');
+        const initialWordObj = initialWord && Library.find(word => word.word === initialWord);
+        if (initialWordObj) {
+            this.state.state = 'cards';
+            this.state.pool = [initialWordObj];
+        }
     }
 
     onCategoriesSelected(categories) {
