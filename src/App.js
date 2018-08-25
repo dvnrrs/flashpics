@@ -5,6 +5,7 @@ import CardPresenter from './CardPresenter';
 import Library from './Library';
 import MenuScreen from './MenuScreen';
 import SplashScreen from './SplashScreen';
+import Typing from './Typing';
 
 import BackIcon from './images/left_arrow.png';
 import FullScreenIcon from './images/fullscreen.png';
@@ -62,6 +63,10 @@ export default class App extends Component {
         this.setState({state: 'cards', pool: pool})
     }
 
+    onTypingSelected() {
+        this.setState({state: 'typing', pool: Library.slice()})
+    }
+
     onSplashScreenFinished() {
         this.setState({state: 'menu'});
     }
@@ -82,14 +87,17 @@ export default class App extends Component {
                 {this.state.state === 'splash' &&
                     <SplashScreen onFinished={this.onSplashScreenFinished.bind(this)} />}
                 {this.state.state === 'menu' &&
-                    <MenuScreen onCategoriesSelected={this.onCategoriesSelected.bind(this)} />}
+                    <MenuScreen onCategoriesSelected={this.onCategoriesSelected.bind(this)}
+                                onTypingSelected={this.onTypingSelected.bind(this)} />}
                 {this.state.state === 'cards' &&
                     <CardPresenter pool={this.state.pool} />}
+                {this.state.state === 'typing' &&
+                    <Typing pool={this.state.pool} />}
                 {!this.state.full &&
                     <div className="full-screen-icon"
                          style={{backgroundImage: 'url("' + FullScreenIcon + '")'}}
                          onClick={this.goFull.bind(this)} />}
-                {this.state.state === 'cards' &&
+                {(this.state.state === 'cards' || this.state.state === 'typing') &&
                     <div className="back-icon"
                          style={{backgroundImage: 'url("' + BackIcon + '")'}}
                          onClick={this.goBack.bind(this)} />}

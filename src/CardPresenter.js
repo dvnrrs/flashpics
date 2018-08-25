@@ -65,17 +65,6 @@ export default class CardPresenter extends Component {
         }, 0);
     }
 
-    onCategoriesSelected(categories) {
-        if (this.state.opacity === 1) {
-            this.setState({opacity: 0});
-            setTimeout(() => {
-                if (this.props.onCategoriesSelected) {
-                    this.props.onCategoriesSelected(categories);
-                }
-            }, this.props.fade || 1000);
-        }
-    }
-
     render() {
 
         const styles = {

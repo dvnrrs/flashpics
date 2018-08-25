@@ -10,6 +10,7 @@ import Everything from './images/everything.png';
 import Food from './images/food.png';
 import Household from './images/household.png';
 import LettersAndNumbers from './images/letters_and_numbers.png';
+import Typing from './images/typing.png';
 
 export default class MenuScreen extends Component {
 
@@ -28,6 +29,17 @@ export default class MenuScreen extends Component {
             setTimeout(() => {
                 if (this.props.onCategoriesSelected) {
                     this.props.onCategoriesSelected(categories);
+                }
+            }, this.props.fade || 1000);
+        }
+    }
+
+    onTypingSelected() {
+        if (this.state.opacity === 1) {
+            this.setState({opacity: 0});
+            setTimeout(() => {
+                if (this.props.onTypingSelected) {
+                    this.props.onTypingSelected();
                 }
             }, this.props.fade || 1000);
         }
@@ -89,6 +101,12 @@ export default class MenuScreen extends Component {
                          style={{backgroundImage: 'url("' + Everything + '")'}}
                          onClick={this.onCategoriesSelected.bind(this, ['*'])}/>
                     <div className="menu-screen-tile-label">Everything</div>
+                </div>
+                <div className="menu-screen-tile menu-screen-tile-r3 menu-screen-tile-c3">
+                    <div className="menu-screen-tile-image"
+                         style={{backgroundImage: 'url("' + Typing + '")'}}
+                         onClick={this.onTypingSelected.bind(this)}/>
+                    <div className="menu-screen-tile-label">You Type!</div>
                 </div>
             </div>
         );
