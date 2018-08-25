@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.1e143f0e.css",
-  "main.css.map": "static/css/main.1e143f0e.css.map",
-  "main.js": "static/js/main.31710ba9.js",
-  "main.js.map": "static/js/main.31710ba9.js.map",
+  "main.css": "static/css/main.72c762e5.css",
+  "main.css.map": "static/css/main.72c762e5.css.map",
+  "main.js": "static/js/main.27a50a42.js",
+  "main.js.map": "static/js/main.27a50a42.js.map",
   "static\\media\\activities.png": "static/media/activities.886cd2d1.png",
   "static\\media\\animals.png": "static/media/animals.35caa684.png",
   "static\\media\\body_and_clothes.png": "static/media/body_and_clothes.73b14397.png",
@@ -11,5 +11,6 @@
   "static\\media\\food.png": "static/media/food.3eefd1ca.png",
   "static\\media\\fullscreen.png": "static/media/fullscreen.dabee64e.png",
   "static\\media\\household.png": "static/media/household.7ef739af.png",
-  "static\\media\\letters_and_numbers.png": "static/media/letters_and_numbers.f367b496.png"
+  "static\\media\\letters_and_numbers.png": "static/media/letters_and_numbers.f367b496.png",
+  "static\\media\\typing.png": "static/media/typing.8f3b7197.png"
 }
