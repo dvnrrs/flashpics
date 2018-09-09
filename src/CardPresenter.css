@@ -41,6 +41,12 @@
     text-transform: uppercase;
 }
 
+.card-text small {
+    font-size: 60vmin;
+    margin-left: 10vmin;
+    text-transform: none;
+}
+
 .card-label input {
     background: transparent;
     box-shadow: 0 0 3pt rgb(0, 0, 0, 0.25);

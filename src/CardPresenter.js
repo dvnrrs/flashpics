@@ -90,6 +90,8 @@ export default class CardPresenter extends Component {
                 {this.state.word && !this.state.word.image && !this.state.word.bg &&
                     <div className="card-text" style={{color: this.state.color}}>
                         {this.state.word.word}
+                        {this.state.word.word.match(/^[A-Za-z]$/) &&
+                            <small>{this.state.word.word.toLowerCase()}</small>}
                     </div>}
             </div>
         );
